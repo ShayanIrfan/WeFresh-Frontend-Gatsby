@@ -37,8 +37,7 @@ const Header = () => {
 
     const [showNav, setShowNav] = useState(false);
 
-    const navList = data?.contentfulHeader?.links
-    console.log("navList: ", navList)
+    const navList = data?.contentfulHeader?.links;
 
     const NavEnablerDisablerFunc = () => {
         setShowNav(false);
