@@ -1,0 +1,106 @@
+.features-section {
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 60px;
+    background-color: var(--light-blue);
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 16px;
+    }
+
+    .feature-card {
+        background-color: var(--white);
+        border-radius: 16px;
+        padding: 32px 24px;
+        border: 1px solid var(--greyish-for-border);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(104, 186, 227, 0.15);
+        }
+    }
+
+    .feature-icon {
+        font-size: 40px;
+        margin-bottom: 16px;
+    }
+
+    .feature-title {
+        font-family: 'Prompt Regular';
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--black);
+        margin-bottom: 10px;
+    }
+
+    .feature-description {
+        font-family: 'Prompt Regular';
+        font-size: 14px;
+        color: var(--grey);
+        line-height: 1.6;
+    }
+
+    @media (min-width: 520px) {
+        .features-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .feature-title {
+            font-size: 19px;
+        }
+
+        .feature-description {
+            font-size: 15px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding: 80px 20px;
+        margin-top: 80px;
+
+        .feature-card {
+            padding: 40px 28px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+        }
+
+        .feature-description {
+            font-size: 16px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        padding: 100px 20px;
+        margin-top: 100px;
+
+        .features-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .feature-card:last-child {
+            grid-column: 2 / 3;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+        }
+
+        .feature-title {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            font-size: 16px;
+        }
+    }
+}

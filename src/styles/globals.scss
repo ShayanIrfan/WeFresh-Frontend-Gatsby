@@ -1,3 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --blue: #68BAE3;
     --white: #ffffff;
@@ -12,7 +22,7 @@
     font-family: 'Prompt Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Prompt Regular'), url('Prompt-Regular.woff') format('woff');
+    src: url('../assets/fonts/Prompt-Regular.woff') format('woff');
 }
 
 p,

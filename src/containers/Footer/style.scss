@@ -55,4 +55,10 @@
             width: 80%;
         }
     }
+
+    @media (min-height: 1748px) {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 }
