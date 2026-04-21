@@ -4,7 +4,7 @@ import Close from '../../../assets/svgs/Close.svg';
 
 type MobileNavProps = {
   showNav: boolean,
-  NavEnablerDisablerFunc: () => void,
+  navEnablerDisablerFunc: () => void,
   list: { content: string }[],
   image: {
     url: string,
@@ -13,10 +13,10 @@ type MobileNavProps = {
   signUpBtnTxt: string
 }
 
-function MobileNav({ showNav, NavEnablerDisablerFunc, list, image, signUpBtnTxt }: MobileNavProps) {
+function MobileNav({ showNav, navEnablerDisablerFunc, list, image, signUpBtnTxt }: MobileNavProps) {
 
   const signUp = () => {
-    NavEnablerDisablerFunc();
+    navEnablerDisablerFunc();
     // navigate
   }
 
@@ -27,12 +27,12 @@ function MobileNav({ showNav, NavEnablerDisablerFunc, list, image, signUpBtnTxt 
           <img src={image.url} alt={image.title} />
         </div>
         <div>
-          <button onClick={NavEnablerDisablerFunc}><Close /></button>
+          <button onClick={navEnablerDisablerFunc}><Close /></button>
         </div>
       </div>
       <div>
         <ul>
-          {list.map((v, i) => <li key={i} onClick={NavEnablerDisablerFunc}>{v.content}</li>)}
+          {list.map((v, i) => <li key={i} onClick={navEnablerDisablerFunc}>{v.content}</li>)}
         </ul>
       </div>
       <div className='btn-div'>

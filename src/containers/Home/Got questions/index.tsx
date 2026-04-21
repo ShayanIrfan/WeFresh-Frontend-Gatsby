@@ -30,14 +30,14 @@ function GotQuestions() {
 
   const headingContent = data?.contentfulGotQuestions?.heading;
 
-  const change = (val: any) => {
+  const onChange = (val: any) => {
     setQuestions(val);
   };
 
   return (
     <div className="got-questions">
       <HeadingWithSub richText={headingContent} />
-      <Accordian questions={questions} onChange={change} />
+      <Accordian questions={questions} onChange={onChange} />
     </div>
   );
 }
