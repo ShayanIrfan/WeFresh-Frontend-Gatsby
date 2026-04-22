@@ -16,6 +16,12 @@ type LeftContainerProps = {
 
 function LeftContainer({ inputWithButton }: LeftContainerProps) {
 
+    const [hasMounted, setHasMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setHasMounted(true);
+    }, []);
+
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 781px)'
     });
@@ -23,7 +29,9 @@ function LeftContainer({ inputWithButton }: LeftContainerProps) {
     const heroLeftContent = {
         firstLine: "The smarter way",
         secondLine: "to order your food",
-        placeholder: isDesktopOrLaptop ? inputWithButton.desktopPlaceholder : inputWithButton.phonePlaceholder,
+        placeholder: hasMounted
+            ? (isDesktopOrLaptop ? inputWithButton.desktopPlaceholder : inputWithButton.phonePlaceholder)
+            : inputWithButton.desktopPlaceholder,
         btnText: inputWithButton.sendButton.button
     }
 
